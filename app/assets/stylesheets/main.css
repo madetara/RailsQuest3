@@ -1,0 +1,31 @@
+.battlefield{
+  display: flex;
+  justify-content: center;
+}
+.team_container{
+  display: flex;
+  flex-wrap: wrap;
+  width: 30%;
+}
+.left{
+    background-color: #73bd42;
+}
+.right{
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+    background-color: #d94526;
+}
+
+.controls{
+  display: flex;
+  justify-content: center;
+}
+.controls_container{
+  display: flex;
+  flex-wrap: wrap;
+  width: 30%;
+}
+.task{
+  font-size: 16px;
+  color: #444444;
+}
