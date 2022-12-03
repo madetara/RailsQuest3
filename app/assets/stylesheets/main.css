@@ -1,31 +1,41 @@
-.battlefield{
-  display: flex;
-  justify-content: center;
+.battlefield {
+    display: flex;
+    justify-content: center;
 }
-.team_container{
-  display: flex;
-  flex-wrap: wrap;
-  width: 30%;
+
+.team_grid_container {
+    display: grid;
+    width: 60%;
 }
-.left{
+
+.team_units {
+    grid-row: 1;
+}
+
+.team_controls_grid_container {
+    grid-row: 2;
+}
+
+.team_controls_flex_container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.team_controls {
+}
+
+.left {
     background-color: #73bd42;
 }
-.right{
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
+
+.right {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
     background-color: #d94526;
 }
 
-.controls{
-  display: flex;
-  justify-content: center;
-}
-.controls_container{
-  display: flex;
-  flex-wrap: wrap;
-  width: 30%;
-}
-.task{
-  font-size: 16px;
-  color: #444444;
+.task {
+    font-size: 16px;
+    color: #444444;
 }
