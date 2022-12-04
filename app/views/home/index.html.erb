@@ -1,39 +1,8 @@
 <div class='battlefield'>
   <div class='team_grid_container'>
-    <div class="team_units left">
-      <%- @team1.each do |character| %>
-        <div>
-          <%= image_tag character.unit %>
-        </div>
-      <% end %>
-    </div>
-    <div class="team_controls_grid_container">
-      <div class="team_controls_flex_container">
-        <div class='team_controls'>
-          <%= link_to 'Add Knight', '/' %>
-        </div>
-        <div class="team_controls">
-          <%= link_to 'Add Mage', '/' %>
-        </div>
-      </div>
-    </div>
-    <div class="team_units right">
-      <%- @team2.each do |character| %>
-        <div>
-          <%= image_tag character.unit %>
-        </div>
-      <% end %>
-    </div>
-    <div class="team_controls_grid_container">
-      <div class="team_controls_flex_container">
-        <div class='team_controls'>
-          <%= link_to 'Add Medusa', '/' %>
-        </div>
-        <div class="team_controls">
-          <%= link_to 'Add Jinn', '/' %>
-        </div>
-      </div>
-    </div>
+    <%- @teams.each do |team| %>
+      <%= render "team", team: team %>
+    <% end %>
   </div>
 </div>
 

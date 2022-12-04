@@ -1,0 +1,17 @@
+<div class="team_units <%= team[:position] %>">
+  <%- team[:units].each do |character| %>
+    <div>
+      <%= image_tag character.unit %>
+    </div>
+  <% end %>
+</div>
+<div class="team_controls_grid_container">
+  <div class="team_controls_flex_container">
+    <%- team[:unit_types].each do |unit_type| %>
+      <%= render "unit_control", unit: unit_type, team_id: team[:id] %>
+    <% end %>
+    <div class="team_controls">
+      <%= button_to 'Ultimate', "/teams/#{team[:id]}/skills/ultimate", method: :post, disabled: !can_use_ultimate?(team[:id]) %>
+    </div>
+  </div>
+</div>
